@@ -4,3 +4,4 @@ recursive-include dataset/example *.csv *.json *.md
 recursive-include docs *.md *.json
 recursive-include tests *.py
 global-exclude __pycache__ *.pyc
+recursive-include assets *.svg

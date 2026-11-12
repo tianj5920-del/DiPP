@@ -12,17 +12,9 @@
 
 Plasma proteomics provides molecular information for distinguishing healthy controls (HC), Parkinson's disease (PD), and prodromal status. DiPP-Label connects this three-class prediction task with protein-level interpretation. A single Gaussian prototype learns a residual correction around logistic-regression scores, while a dedicated HC kernel captures the control-versus-non-control distinction. Training out-of-fold predictions determine their probability mixture. Grouped SHAP then identifies the assay contributions to the PD–prodromal, HC–prodromal, and HC–PD scores. The manuscript reports mean macro-F1 **0.5719** and macro OvO AUC **0.7370** across three participant partitions of a 325-person plasma cohort with diabetes-related evidence. The code below provides the final method, its four component ablations, standard classifier comparisons, and a fully synthetic example. **This release runs on CPU.**
 
-```mermaid
-flowchart LR
-    A[Baseline plasma and cohort metadata] --> B[Training-fold feature processing]
-    B --> C[LR scores and guided representation]
-    B --> D[HC kernel]
-    C --> E[Single Gaussian prototype correction]
-    E --> F[Training-OOF probability fusion]
-    D --> F
-    F --> G[HC / Prodromal / PD scores]
-    G --> H[Three pairwise grouped-SHAP analyses]
-```
+<p align="center">
+  <img src="assets/figure1_architecture_en.svg" alt="DiPP-Label architecture: protein features, two-branch inference, and training with fusion-weight learning" width="100%">
+</p>
 
 ## Synthetic example
 
