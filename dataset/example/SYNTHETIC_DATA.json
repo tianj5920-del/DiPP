@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "generator": "dipp_label.synthetic.generate_example",
+  "seed": 20261112,
+  "expected_eligible_participants": 216,
+  "assays": 64,
+  "class_order": [
+    "HC",
+    "Prodromal",
+    "PD"
+  ],
+  "purpose": "Schema and execution example only; all people, proteins and measurements are invented.",
+  "source": "Seeded random numbers and explicit toy class shifts; no real participant records or fitted statistics used.",
+  "sha256": {
+    "participants.csv": "df7de598f511e65f46954d9e3ca43143f9c4f2f37cba10dd3211cd39ea673049",
+    "assays.csv": "7994c9fcd47242b351abefe32ac81f3e7bea21b2a2dcf94aec9cf71343746872",
+    "plasma.csv": "24083b3cc18f696c4f59f0ce72566558cec20584226de005e1a9285f91aae7bb"
+  }
+}

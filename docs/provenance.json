@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-12",
+  "recipe": "Final single-member E7 plus HC kernel",
+  "source_files": [
+    {
+      "source": "dipp_label_lr_anchor_core.py",
+      "sha256": "9467d2b1da5c9f08d9576228707c49eaeddb2d24f985f7be28ca0b222d52a288",
+      "reference_functions": [
+        "fit_lr"
+      ]
+    },
+    {
+      "source": "dipp_label_test_metrics.py",
+      "sha256": "d8325b50c4ad9f365372c7823c97cfec51bedbaf286e489be0e6f424e4d5be78",
+      "reference_functions": [
+        "gaussian"
+      ]
+    },
+    {
+      "source": "dipp_label_rank32_models.py",
+      "sha256": "95b46dc4e4e27e388991b48e79acac5cedc8e5eafac9c3032a5bcd74e8e6ae06",
+      "reference_functions": [
+        "episode_rank"
+      ]
+    },
+    {
+      "source": "dipp_label_autoresearch_sampling.py",
+      "sha256": "36906525422be1aeaa23a529dab23c5c87a3b7996ae566598e5c98ce7b2f43c2",
+      "reference_functions": [
+        "episodes"
+      ]
+    },
+    {
+      "source": "plasma_crossproject_threeclass.py",
+      "sha256": "e4740c3832f6a67272dc2f699e78b2cd0e37fb4345afdc2837be6c91c9c24618",
+      "reference_functions": [
+        "three_class_masks"
+      ]
+    },
+    {
+      "source": "dipp_label_round2_kernel_readout.py",
+      "sha256": "14820037810f2bb8cf3712bcc1a7d21f881caab7f832fa945687b35c8afde9dd",
+      "reference_functions": [
+        "conjugate_gradient"
+      ]
+    },
+    {
+      "source": "plasma_reliability_views.py",
+      "sha256": "73ce1875890f1186343cf4ee57563674b7c1ee36ef13da7778a3b5b4d001d641",
+      "role": "Training-fold feature transformations"
+    },
+    {
+      "source": "full_feature_voting_cpu.py",
+      "sha256": "ff95ad3a3b372b190b99ff89ebb223363b373022d9a739cd4bf366b5704149e4",
+      "role": "Training imputation and standardization"
+    },
+    {
+      "source": "dipp_label_protein_importance_model.py",
+      "sha256": "f7da6c2e6b31d5ba2bb2191e013b43ae9bd860362c01bdaf04b60847c7138bda",
+      "role": "Exact final predictor and NPU randomized PCA"
+    },
+    {
+      "source": "dipp_label_minimal_experts_models.py",
+      "sha256": "7fae95775e22a48304729121fc29f5429371493f80f52a4da68ff67dfb5ee086",
+      "role": "Direct LR-free prototype, HC kernel, branch hierarchy"
+    },
+    {
+      "source": "dipp_label_hc_research_heads.py",
+      "sha256": "1f9cb1adc8ba5210f3ac476d9638b1093bbba648ece753878f55ad5e603c4c0b",
+      "role": "Balanced shared-simplex fusion"
+    },
+    {
+      "source": "dipp_label_compact_teacher.py",
+      "sha256": "3bf62073464375e30d54a2ebbcf1014694b0b8aff672e896de57df5f1eeaad55",
+      "role": "LR-free 8/4/4 PCA representation"
+    },
+    {
+      "source": "dipp_label_single_e7_hc.py",
+      "sha256": "37a4fabb66d88d36819adff508092aa307d48da7f7c67449dc9a082221034db0",
+      "role": "Final recipe and fit orchestration"
+    },
+    {
+      "source": "dipp_label_paper_baselines.py",
+      "sha256": "ae40a43a4e4b4135ca306079c115331e5dd194c4a39ef92f1060e17e3125b6bf",
+      "role": "Classifier grids, neural baselines and fold selection"
+    },
+    {
+      "source": "dipp_label_paper_classical.py",
+      "sha256": "9b85d8b239642fd8176a4027f208fe24ad4a36f114f23f411c36737d13ea41d0",
+      "role": "CPU classifier settings"
+    },
+    {
+      "source": "dipp_label_group_shap_model.py",
+      "sha256": "2bacdaca96c166a7b6d6b3107546066877f6a44d87bab10d89dbd4049e21f7e8",
+      "role": "Same-assay SHAP game and pairwise scores"
+    },
+    {
+      "source": "dipp_label_group_shap.py",
+      "sha256": "54642977ac02e78482b5370b2cdac51de7cdd852d933792dbbba5382126040ec",
+      "role": "Aggregation and expression direction"
+    }
+  ],
+  "ported_modules": [
+    "data",
+    "features",
+    "numerics",
+    "model",
+    "baselines",
+    "metrics",
+    "analysis",
+    "workflow"
+  ],
+  "differences": [
+    "Explicit normalized CSV inputs replace private ingestion and memory caches.",
+    "Auto-generated holdouts are new class-stratified partitions; private historical assignments are not included.",
+    "Grouped SHAP uses ordinary masking rather than private coalition-cache acceleration.",
+    "CPU-only execution; numerical primitives are tested on synthetic inputs."
+  ]
+}

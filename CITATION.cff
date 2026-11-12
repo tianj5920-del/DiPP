@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated DiPP-Label manuscript when available."
+title: "DiPP-Label: Single-Prototype and Control-Kernel Fusion for Three-Class Plasma Proteomic Classification"
+type: software
+authors:
+  - name: "DiPP contributors"
+version: 0.1.0
+date-released: 2026-11-12
+license: MIT
+repository-code: "https://github.com/tianj5920-del/DiPP"

@@ -1,0 +1,6 @@
+include LICENSE README.md README_zh.md CITATION.cff constraints-cpu.txt
+recursive-include configs *.json
+recursive-include dataset/example *.csv *.json *.md
+recursive-include docs *.md *.json
+recursive-include tests *.py
+global-exclude __pycache__ *.pyc

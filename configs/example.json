@@ -1,0 +1,15 @@
+{
+  "device": "cpu",
+  "threads": 2,
+  "seeds": [71750],
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "prototype_steps": 40,
+  "fusion_steps": 80,
+  "baseline_grid": "demo",
+  "baseline_neural_steps": [20],
+  "baseline_neural_members": 1,
+  "shap_background_per_class": 4,
+  "shap_cycles": 2,
+  "shap_max_per_class": 3
+}

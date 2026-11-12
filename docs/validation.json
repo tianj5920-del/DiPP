@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-12",
+  "release": "0.1.0",
+  "device": "cpu",
+  "unit_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "synthetic_run": {
+    "participants": 216,
+    "assays": 64,
+    "model_count": 15,
+    "models": [
+      "dipp_label",
+      "without_hc",
+      "lr_hc",
+      "lr_free_hc",
+      "lr_free",
+      "lr",
+      "linear_svm",
+      "rbf_svm",
+      "random_forest",
+      "extra_trees",
+      "lightgbm",
+      "xgboost",
+      "mlp",
+      "residual_mlp",
+      "random"
+    ],
+    "metric_rows": 30,
+    "elapsed_seconds": 344.9923284724355,
+    "outer_folds": 3,
+    "inner_fusion_folds": 3,
+    "prototype_steps": 40,
+    "baseline_grid": "demo"
+  },
+  "shap_checks": [
+    {
+      "seed": 71750,
+      "boundary": "PD_vs_Prodromal",
+      "recipient_count": 6,
+      "background_per_class": 4,
+      "cycles": 2,
+      "maximum_additivity_error": 3.5798226205585593e-07,
+      "assay_count": 64
+    },
+    {
+      "seed": 71750,
+      "boundary": "HC_vs_Prodromal",
+      "recipient_count": 6,
+      "background_per_class": 4,
+      "cycles": 2,
+      "maximum_additivity_error": 4.965572777404503e-07,
+      "assay_count": 64
+    },
+    {
+      "seed": 71750,
+      "boundary": "HC_vs_PD",
+      "recipient_count": 6,
+      "background_per_class": 4,
+      "cycles": 2,
+      "maximum_additivity_error": 6.317169514158394e-07,
+      "assay_count": 64
+    }
+  ],
+  "versions": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "torch": "2.7.1",
+    "shap": "0.46.0",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.0.5"
+  },
+  "python": "3.10.20",
+  "real_participant_data_accessed": false,
+  "full_real_cohort_retraining": false,
+  "source_algorithm_config": "configs/paper.json"
+}
