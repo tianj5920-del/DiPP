@@ -18,7 +18,7 @@ Plasma proteomics provides molecular information for distinguishing healthy cont
 
 ## Synthetic example
 
-[`dataset/example`](dataset/example) contains **216 invented participants and 64 invented protein assays**. It includes missing values, technical QC failures, overlapping project samples, and three additional records that exercise exclusion rules. Every participant, assay name and measurement is synthetic; the generator uses seeded random numbers and explicit toy class shifts, without real PPMI rows or fitted real-data statistics.
+All data in [`dataset/example`](dataset/example) are **randomly generated, are not real PPMI data, and are provided solely as a format reference**. The example contains 216 invented participants and 64 invented protein assays, with missing values, technical QC failures, overlapping project samples, and three additional records that exercise exclusion rules. The generator uses seeded random numbers and explicit toy class shifts, without real PPMI rows or fitted real-data statistics.
 
 | File | Purpose |
 | --- | --- |
@@ -46,7 +46,7 @@ These tables illustrate the package's normalized PPMI-style input contract. Synt
 
 ### 1. Dataset preparation
 
-Use the included synthetic example to explore the complete workflow. For real data, obtain authorized PPMI exports separately and convert them to the [input contract](docs/data.md):
+Obtain authorized PPMI data separately, then **manually prepare the data to match the file structure and column definitions in `dataset/example`**. See the [input specification](docs/data.md) for field details:
 
 ```text
 dataset/
